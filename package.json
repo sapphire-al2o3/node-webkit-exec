@@ -1,0 +1,12 @@
+{
+    "name": "node-webkit-exec",
+    "title": "node-webkit exec",
+    "description": "プロジェクトのディレクトリでnode-webkitを実行する",
+    "homepage": "",
+    "author": "sapphire_al2o3",
+    "license": "MIT",
+    "engines": {
+        "brackets": ">=0.30.0"
+    },
+    "version": "1.0.0"
+}
