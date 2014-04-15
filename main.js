@@ -12,7 +12,7 @@ define(function (require, exports, module) {
 	
 	var config = JSON.parse(require('text!./config.json'));
 
-	var simpleDomain = new NodeDomain("simple", ExtensionUtils.getModulePath(module, "execnw.js"));
+	var simpleDomain = new NodeDomain("node-webkit-exec", ExtensionUtils.getModulePath(module, "execnw.js"));
 
 	
 	function _run() {

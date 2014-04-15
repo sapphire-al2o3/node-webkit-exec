@@ -9,18 +9,19 @@
 	}
 	
 	function init(domainManager) {
-		if (!domainManager.hasDomain("simple")) {
-			domainManager.registerDomain("simple", {major: 0, minor: 1});
+		if (!domainManager.hasDomain("node-webkit-exec")) {
+			domainManager.registerDomain("node-webkit-exec", {major: 0, minor: 1});
 		}
 		domainManager.registerCommand(
-			"simple",       // domain name
+			"node-webkit-exec",       // domain name
 			"execnw",         // command name
 			execnw,           // command handler function
 			false,          // this command is synchronous in Node
 			"Run Node-Webkit",
-			[{name: "dir", // parameters
-				type: "string",
-				description: "dir"}]
+			[
+				{name: "dir", type: "string", description: "dir"},
+				{name: "nw", type: "string", description: "node-webkit path"}
+			] // parameters
 		);
 	}
 
