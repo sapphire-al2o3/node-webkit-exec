@@ -15,4 +15,4 @@ node-webkit exec
 ### 使い方
 
 - config.jsonにnode-webkitのパスを書く。
-- ツールバーのアイコンを押して少し待つ。(node-webkigの初回起動は遅い)
+- ツールバーのアイコンを押して少し待つ。(node-webkitの初回起動は遅い)
