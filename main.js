@@ -16,10 +16,19 @@ define(function (require, exports, module) {
 
 	
 	function _run() {
+		
 		var root = ProjectManager.getProjectRoot(),
 			dir = root ? FileUtils.getDirectoryPath(root.fullPath) : '',
 			nw = config.nw;
-		if(nw) simpleDomain.exec('execnw', dir, nw);
+		
+		root.getContents(function(err, contents) {
+			for(var i = 0; i < contents.length; i++) {
+				if(contents[i].name === 'package.json') {
+					if(nw) simpleDomain.exec('execnw', dir, nw);
+					break;
+				}
+			}
+		});
 	}
 	
 	ExtensionUtils.loadStyleSheet(module, "style.css");
